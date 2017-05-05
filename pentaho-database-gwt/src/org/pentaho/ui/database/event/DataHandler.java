@@ -597,15 +597,6 @@ public class DataHandler extends AbstractXulEventHandler {
       return;
     }
 
-    if (!"GENERIC".equals(database.getDatabaseType().getShortName()) && !"KettleThin".equals( database.getDatabaseType().getShortName() )){
-      if ( isBlank( database.getDatabaseName() ) ) {
-          showMessage(
-              messages.getString( "DatabaseDialog.ErrorMissingDatabaseName.title" ), //$NON-NLS-1$
-              messages.getString( "DatabaseDialog.ErrorMissingDatabaseName.description" ), false ); //$NON-NLS-1$
-          return;
-      }
-    }
-
     if ( !checkPoolingParameters() ) {
       return;
     }
